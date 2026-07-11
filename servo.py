@@ -8,16 +8,14 @@ pwm.start(0)
 
 try:
     while True:
-        pwm.ChangeDutyCycle(2.5)
-        time.sleep(0.5)
-        pwm.ChangeDutyCycle(0)     
-        time.sleep(2)             
-        
-        
-        pwm.ChangeDutyCycle(10)
-        time.sleep(0.5)            
-        pwm.ChangeDutyCycle(0)     
-        time.sleep(2)
+        for duty_scaled in range(25, 101, 1):
+            duty = duty_scaled / 10 
+            pwm.ChangeDutyCycle(duty)
+            time.sleep(0.05)
+        for duty_scaled in range(100, 24, -1):
+            duty = duty_scaled / 10 
+            pwm.ChangeDutyCycle(duty)
+            time.sleep(0.1)
 
 
 
