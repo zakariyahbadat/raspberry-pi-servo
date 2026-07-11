@@ -8,22 +8,21 @@ pwm.start(0)
 
 try:
     while True:
-        # Move to 0 degrees
         pwm.ChangeDutyCycle(2.5)
-        time.sleep(0.5)            # Give it half a second to physically arrive
-        pwm.ChangeDutyCycle(0)     # TURN OFF THE PULSE (Stops jittering!)
-        time.sleep(2)              # Sit silently for 2 seconds
+        time.sleep(0.5)
+        pwm.ChangeDutyCycle(0)     
+        time.sleep(2)             
         
-        # Move to 90 degrees
+        
         pwm.ChangeDutyCycle(5.5)
-        time.sleep(0.5)            # Give it time to move
-        pwm.ChangeDutyCycle(0)     # TURN OFF THE PULSE
+        time.sleep(0.5)            
+        pwm.ChangeDutyCycle(0)    
         time.sleep(2)
         
-        # Move to 180 degrees (using 11.5 to prevent straining)
+        
         pwm.ChangeDutyCycle(10)
-        time.sleep(0.5)            # Give it time to move
-        pwm.ChangeDutyCycle(0)     # TURN OFF THE PULSE
+        time.sleep(0.5)            
+        pwm.ChangeDutyCycle(0)     
         time.sleep(2)
 
 
