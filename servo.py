@@ -15,13 +15,13 @@ try:
         time.sleep(2)              # Sit silently for 2 seconds
         
         # Move to 90 degrees
-        pwm.ChangeDutyCycle(7.5)
+        pwm.ChangeDutyCycle(5.5)
         time.sleep(0.5)            # Give it time to move
         pwm.ChangeDutyCycle(0)     # TURN OFF THE PULSE
         time.sleep(2)
         
         # Move to 180 degrees (using 11.5 to prevent straining)
-        pwm.ChangeDutyCycle(11.5)
+        pwm.ChangeDutyCycle(10)
         time.sleep(0.5)            # Give it time to move
         pwm.ChangeDutyCycle(0)     # TURN OFF THE PULSE
         time.sleep(2)
