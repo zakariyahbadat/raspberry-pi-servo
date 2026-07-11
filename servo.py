@@ -14,12 +14,6 @@ try:
         time.sleep(2)             
         
         
-        pwm.ChangeDutyCycle(5.5)
-        time.sleep(0.5)            
-        pwm.ChangeDutyCycle(0)    
-        time.sleep(2)
-        
-        
         pwm.ChangeDutyCycle(10)
         time.sleep(0.5)            
         pwm.ChangeDutyCycle(0)     
